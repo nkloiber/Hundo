@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>JavaScript Base Template</title>
+    <title>Hundo | App</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">JS Template</a>
+        <a class="navbar-brand" href="index.html">Hundo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/index.html">Hundo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
+                    <a class="nav-link" href="/app.html">Hundo | The App</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/code.html">The Code</a>
+                    <a class="nav-link" href="/code.html">Hundo | The Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about.html">About Me</a>
@@ -48,8 +48,44 @@
 
     <main class="flex-shrink-0">
        <div class="container">
-           <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-           <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
+           <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Hundo App</h1>
+                            <p>An app which generates a set of numbers based on user input, then bolds all numbers it detects to be even!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <h1>Instructions</h1>
+                        <p>Enter a start value and end value into the text boxes. Make sure the start value is lesser than the end value! Numbers above 10,000 or below -10,000 cannot be accepted. Once you have your numbers, press the red button and your list will be generated!</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <h1>Enter Values</h1>
+                        <div class="col">
+                            <input type="number" class="form-control" id="startValue" placeholder="Start Value" value=0>
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" id="endValue" placeholder="End Value" value=100>
+                        </div>
+                        <button id="submitBtn" class="btn btn-danger">Click Me</button>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h1>Results</h1>
+                            <table class="table table-striped">
+                                <tbody  id="output"> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+           </div>
        </div>
     </main>
 
@@ -58,7 +94,7 @@
         <div class="container-fluid text-center text-danger">
             <div class="row">
                <div class="col">
-                   &copy2021 <span class="text-primary">Nathan Kloiber</span>
+                   &copy2021 <span class="text-danger">Nathan Kloiber</span>
                </div> 
                <div class="col">
                    <span class="text-light text-uppercase"> nathan kloiber</span>
@@ -82,8 +118,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/prism.js"></script>
     <script src="/js/site.js"></script>
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", getNumbers)
+    </script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
